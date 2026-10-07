@@ -1,0 +1,217 @@
+{
+  "schema": "skwid-source-manifest/1",
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "81cbe0c72a3bc4d6b2c965c91a42168b857e0034233cc83b4a1ceb9603835022"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "828fb057d9eb4c9500e4f1cb2eed9600a449731cd349f5208f45aa380d2d621f"
+    },
+    {
+      "path": "Procfile",
+      "sha256": "d91803edae417312407499a8b742c887e3f05cb11cb6984e7b9c9184a4425e01"
+    },
+    {
+      "path": "README-backend.md",
+      "sha256": "fcbc57f6ff9065e8bd97cae5c665fad9cc7398a2755a0b38f0cb41f753897ab8"
+    },
+    {
+      "path": "README.md",
+      "sha256": "91ccaf5c7ef1cdda32e5cc87b680c4a0fd5ca4bbfb11fea9cceee90903c856a2"
+    },
+    {
+      "path": "contracts/.env.example",
+      "sha256": "95c50e44a569fa2aa19e8448333c7f48bf6589adb0edffee62e33593929c21fd"
+    },
+    {
+      "path": "contracts/.foundry-project.json",
+      "sha256": "69b5ea0c78ae39db09514b0fbdb5ede964869160eca7a46733e6f0d4c6e3957c"
+    },
+    {
+      "path": "contracts/.gitignore",
+      "sha256": "a65a9f8613a6614dbecb8aabe80866d6ee9d68ee24c79da1aec555e4723ebf63"
+    },
+    {
+      "path": "contracts/DEPLOYMENT.md",
+      "sha256": "0c0b94d0687e60f11e7f7a66d775976023fef19eb8c86e968774d0446db75321"
+    },
+    {
+      "path": "contracts/VERIFICATION.md",
+      "sha256": "9a25b67a07ff466e532cd1d86723066477b3c15cac5f190a2e073a10159f9967"
+    },
+    {
+      "path": "contracts/bindings/SkwidFeeTreasury.json",
+      "sha256": "c36a41c3769f84ee9b51a7f2e664b2f3f67c1b7c0c3393373fec6ca15e164535"
+    },
+    {
+      "path": "contracts/bindings/SkwidReleaseRegistry.json",
+      "sha256": "3f356de669571bbfbb794fc40756a5be69da8580fb760285cbbe4a5df63314bb"
+    },
+    {
+      "path": "contracts/foundry.lock",
+      "sha256": "f6fd73f9f318714a2c1299c7bd9c1d2f802525549490dde55fb90721f59f9537"
+    },
+    {
+      "path": "contracts/foundry.toml",
+      "sha256": "be13957460d2d5e78c4c184d4f5de78ade31ad65962318ec554d1ddf3fe28448"
+    },
+    {
+      "path": "contracts/script/DeploySkwid.s.sol",
+      "sha256": "bf542606aa2835dc2aed422d09a6ecd80f1915abe9f8eec49ec59a5f92355eba"
+    },
+    {
+      "path": "contracts/script/DeploymentBase.s.sol",
+      "sha256": "d062c8e0db221ff7e8896530530a320e898439591531de5c11fdbd5e1852b533"
+    },
+    {
+      "path": "contracts/src/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "contracts/src/SkwidFeeTreasury.sol",
+      "sha256": "87f3f194f45f3f18b2734fc482a88f030411fc27a78cf761d46cac8a11a95b53"
+    },
+    {
+      "path": "contracts/src/SkwidReleaseRegistry.sol",
+      "sha256": "43184e4489ef42d60d98ec830b6ca4fadb527f48434ed30e9e6f0f130739afb9"
+    },
+    {
+      "path": "contracts/test/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "contracts/test/SkwidFeeTreasury.t.sol",
+      "sha256": "43b9a5e4c93de577071cdced67241a336a9ba239e21d8813964d5e3eddc0e5de"
+    },
+    {
+      "path": "contracts/test/SkwidReleaseRegistry.t.sol",
+      "sha256": "76e00d189f19e944990098857bdd1e7cb5d92cf99684f74b816978be6d3ca490"
+    },
+    {
+      "path": "migrations/001_init.sql",
+      "sha256": "795c92269c7598d319c302419808d03cc45e2956ab42fc9ad8165396eb850d5d"
+    },
+    {
+      "path": "migrations/002_proposal_run_states.sql",
+      "sha256": "90bfa429d2cb5a42f290c3fb70d4eb739152268c6c6d6ad733b7cd24bdbd4554"
+    },
+    {
+      "path": "migrations/003_freeze_run_base.sql",
+      "sha256": "995f95ef4dc1bbc46aeca14917b3ef6d572f89974c6e4b13e25a6a351dc04f50"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "6d7de22b3fc84932f71fcaaf6994d3a43c82b76ce7c46682d614c0426a9ed72a"
+    },
+    {
+      "path": "package.json",
+      "sha256": "569f468421e20ac98da34ad294c01ee7648742497b3a72197f4ac69f5f6f9e00"
+    },
+    {
+      "path": "public/app.js",
+      "sha256": "8482dbd1fbe7e4e9ac2f0332a12a3d40562794cf748274c0fe5788fef717ae63"
+    },
+    {
+      "path": "public/assets/banner.png",
+      "sha256": "03cf4f1afa173de510e1d81c982126548e54c33e890e6233baa70de258926e78"
+    },
+    {
+      "path": "public/assets/skwid-face.png",
+      "sha256": "ba31485df61f813cac4cb6b20030c038d718f1dfd403a0f99491c20f116b1fa1"
+    },
+    {
+      "path": "public/assets/skwid.png",
+      "sha256": "ee03d63460d291e556637e505bdf2ef92371dc91aad99de45978c4055ab498bc"
+    },
+    {
+      "path": "public/index.html",
+      "sha256": "e5be84c56d99e2cb13aedb14386cfc8f2b1393761871ec23ce6a87b598257018"
+    },
+    {
+      "path": "public/style.css",
+      "sha256": "d9a76deb41a2a6b3acc42c0be004db0c410bc51c92f77d613c5e377316c04fe5"
+    },
+    {
+      "path": "scripts/runner.mjs",
+      "sha256": "d8698ae6b216117aa732c92948a8246db11fabff5c69eb4fb52cbe4967c274a4"
+    },
+    {
+      "path": "server/app.mjs",
+      "sha256": "6dcc5b94e2c26e0f8cbf40c97ced55c5b8ec37a7ffb63d834634c333a5f3bf5c"
+    },
+    {
+      "path": "server/auth.mjs",
+      "sha256": "cbdb27af9363562dfd163ad7608a5a0d84b664b5237c0e5636d2af2d8e9eac80"
+    },
+    {
+      "path": "server/chain.mjs",
+      "sha256": "11044a43701988e76739a8ad1eb5d21ac1110e6638ca3b72f1617a3c70e54772"
+    },
+    {
+      "path": "server/config.mjs",
+      "sha256": "b1d5d940486b52d445d7d1322d37c99173d9b5c96f2da973b9d7a21da18b9acd"
+    },
+    {
+      "path": "server/db.mjs",
+      "sha256": "7f6d40186aa8ddac602638e7b67d6201b1eb301b89776b1a5ed0181b3ccd0007"
+    },
+    {
+      "path": "server/errors.mjs",
+      "sha256": "e79114fb8b51250aac5fdebe3d1ac942927096176a9f241bf21fcdff0326c6a2"
+    },
+    {
+      "path": "server/index.mjs",
+      "sha256": "2addbf236d5c2f3356bb918926cc27bce2befa9840364a47d982fa7743dd435c"
+    },
+    {
+      "path": "server/migrate.mjs",
+      "sha256": "afb2b1b41d2e728986f86fa1327984d52696c4ddfc635dafdf23cb61de905e06"
+    },
+    {
+      "path": "server/model.mjs",
+      "sha256": "18c080de8ef47b47575021fbd322fb5f576ea46ddef255ef3f2db330dc7c4bc2"
+    },
+    {
+      "path": "server/registry.mjs",
+      "sha256": "2f1a799bd83e4b03db6881460459c263835d1f32a9f093a527bbb5c12ff78d7a"
+    },
+    {
+      "path": "server/repository.mjs",
+      "sha256": "95bcf3c1437094a3095e7d73478414a16d2b12fb300f219e49b57ec07b4a28ac"
+    },
+    {
+      "path": "server/routes.mjs",
+      "sha256": "f8511732ba56bcdb5156d5ba6c04ec0ede84a98cef963de6d98991f2e20d7666"
+    },
+    {
+      "path": "server/runner.mjs",
+      "sha256": "3968159d226139dd587eb2b7020562e57c77dd7aa277740dfa7cc58323bbe29c"
+    },
+    {
+      "path": "server/validation.mjs",
+      "sha256": "90ac9b1208198dda639f13e72f5b7630fdf4d3cefbeecd5a7a93b65785e8665d"
+    },
+    {
+      "path": "tests/backend-auth.test.mjs",
+      "sha256": "5f849ea50c6a14f004776ed7526b355efb35846783856f9b3c059a92375b8b63"
+    },
+    {
+      "path": "tests/backend-db.test.mjs",
+      "sha256": "dd2f0de407cdc606de265bcd6f02ae0afdf04000c6ab88c3fa65bcf2d87b74b5"
+    },
+    {
+      "path": "tests/backend-lease.test.mjs",
+      "sha256": "45088bb0cfdc77648a8dcf09b33f316eb9fd5341db063d9b2b8b7cde9fbf66ea"
+    },
+    {
+      "path": "tests/backend-tls.test.mjs",
+      "sha256": "6aeb580a75a167dcac8bc6f3fb23e948800894c52d4cbf7b856d6ff13ca09785"
+    },
+    {
+      "path": "tests/backend-validation.test.mjs",
+      "sha256": "355495ad0d154d608d5cd25e8cf7a9a8c9f742f5606b14cac0ee7b744d436cbd"
+    }
+  ]
+}
