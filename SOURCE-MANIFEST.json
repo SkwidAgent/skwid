@@ -15,11 +15,11 @@
     },
     {
       "path": "README-backend.md",
-      "sha256": "903f7ebabf8f2e1d32ae3ccaaf1685c3b236298bc5fe9c107b7b9b73f01520e3"
+      "sha256": "985b0c0edc7f2ed65fac9da12336c3c94c3537d7b3641c9e0e1cd6151fc86339"
     },
     {
       "path": "README.md",
-      "sha256": "b67fc95b29451dd5081a09140dfb4d8db7bcca4ae3f587719c58ae792a9a11e1"
+      "sha256": "18fb8d1ac0ac00873a1c565acbb357f136b70ad55d0592f5eb24db1c26d7228a"
     },
     {
       "path": "contracts/.env.example",
@@ -111,7 +111,7 @@
     },
     {
       "path": "public/app.js",
-      "sha256": "9d47144ad517aa6a87ba259419194acf2d658445d43ff5cbb3644853edc6b628"
+      "sha256": "9624e1eca39d9a66a9ba0514b98095f9105daa6e98eba7576c9e51172f496ed3"
     },
     {
       "path": "public/assets/banner.png",
@@ -127,15 +127,19 @@
     },
     {
       "path": "public/index.html",
-      "sha256": "1830d666521c72682c82a07e83bb4e45c94c6c8683d34522711146b11290daf8"
+      "sha256": "1ad328aea7ace6ab71336ca4924dba7db00a92e47de2bfa53576e7cb5778a093"
     },
     {
       "path": "public/journal-search.mjs",
       "sha256": "c3a6b999535dc15d2e4e14cebefbbfa7c37713fd9a06c71db26f3554ad531a1b"
     },
     {
+      "path": "public/proposal-view.mjs",
+      "sha256": "e9a619beffbdc50033b1386227b99027f854ca6a313f08749b95b103abd2ba2a"
+    },
+    {
       "path": "public/style.css",
-      "sha256": "18144a472cc3b425ccc39d3c8e8593aacbf0e947650dac40c7b3d15c4e347ece"
+      "sha256": "eb8fd9e6ce634f3f745a86eb2b896922847fe5a05b4e1f1901ac8677419c46f4"
     },
     {
       "path": "scripts/runner.mjs",
@@ -187,11 +191,11 @@
     },
     {
       "path": "server/repository.mjs",
-      "sha256": "95bcf3c1437094a3095e7d73478414a16d2b12fb300f219e49b57ec07b4a28ac"
+      "sha256": "7b316e24d39343d1c6802e2fe765034b83d662dad3996d71dd8bd7d3b8b0bd5e"
     },
     {
       "path": "server/routes.mjs",
-      "sha256": "4bdfdbebe1ac569aa7348d21fa5e40f79c17a77fc381f3179c2b4097d7da5a3e"
+      "sha256": "96d64c654a9b9a745dd4de03d34c273ff8d8b734ee9a1559706547721e1108c8"
     },
     {
       "path": "server/runner.mjs",
@@ -199,7 +203,7 @@
     },
     {
       "path": "server/validation.mjs",
-      "sha256": "90ac9b1208198dda639f13e72f5b7630fdf4d3cefbeecd5a7a93b65785e8665d"
+      "sha256": "ce793283d82d00923cfe9ac5652d7a43c642f8d9299417ce2206c4b235462cd2"
     },
     {
       "path": "tests/backend-auth.test.mjs",
@@ -228,6 +232,10 @@
     {
       "path": "tests/journal-search.test.mjs",
       "sha256": "f7940afe86cafe4d1c9f88303f01be071dd14e17770331c993748da261da5a4b"
+    },
+    {
+      "path": "tests/proposal-detail.test.mjs",
+      "sha256": "b7ee9625ecf6a40105ce03c724b8aee6f9d0fb7b49534ca9749d69b2c4b20b2b"
     }
   ]
 }
