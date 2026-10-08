@@ -19,7 +19,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "18fb8d1ac0ac00873a1c565acbb357f136b70ad55d0592f5eb24db1c26d7228a"
+      "sha256": "e4edbc0a6704580bb26c2fdbf82b110939585d7f49209731296f9a11b4255d84"
     },
     {
       "path": "contracts/.env.example",
@@ -111,7 +111,7 @@
     },
     {
       "path": "public/app.js",
-      "sha256": "9624e1eca39d9a66a9ba0514b98095f9105daa6e98eba7576c9e51172f496ed3"
+      "sha256": "4136c987eb5ae072d8c7037295f43d6e131dc2fe9bde288a29d7dbf709735a15"
     },
     {
       "path": "public/assets/banner.png",
@@ -127,7 +127,11 @@
     },
     {
       "path": "public/index.html",
-      "sha256": "1ad328aea7ace6ab71336ca4924dba7db00a92e47de2bfa53576e7cb5778a093"
+      "sha256": "9c0434c2f7c388c13b569577836a9dd4d6c60e1d56a6d125c8fde815e1a21809"
+    },
+    {
+      "path": "public/journal-evidence.mjs",
+      "sha256": "6e5f03ce3cfc2cf7009261ac4d4a35d704d91c5847569c4a81674fbe4a935412"
     },
     {
       "path": "public/journal-search.mjs",
@@ -139,7 +143,7 @@
     },
     {
       "path": "public/style.css",
-      "sha256": "eb8fd9e6ce634f3f745a86eb2b896922847fe5a05b4e1f1901ac8677419c46f4"
+      "sha256": "9c875526472fe95569d437d50e631ae18910bc7ef8e4448c1e257609360ad573"
     },
     {
       "path": "scripts/runner.mjs",
@@ -228,6 +232,10 @@
     {
       "path": "tests/backend-validation.test.mjs",
       "sha256": "355495ad0d154d608d5cd25e8cf7a9a8c9f742f5606b14cac0ee7b744d436cbd"
+    },
+    {
+      "path": "tests/journal-evidence.test.mjs",
+      "sha256": "881870fc79b5c24e0c217823f8be0a0836caca918cd63ea502e5875e4d694642"
     },
     {
       "path": "tests/journal-search.test.mjs",

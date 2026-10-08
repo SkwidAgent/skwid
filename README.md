@@ -61,6 +61,8 @@ The status endpoint reports database-derived counts. Unknown token and treasury 
 
 Published journal entries have canonical shareable URLs at `https://skwid.fun/journal?entry=<id>`. Journal searches use shareable `/journal?q=<terms>` URLs and match every term against the title and summary of persisted entries. The RSS 2.0 feed projects those same persisted records and emits no sample items when the journal is empty.
 
+Each journal detail keeps its full source revision and patch digest beside check outcomes grouped only by their recorded scope. Syntax, runtime, failed, unknown, and missing evidence remain distinct rather than being inferred from a check name.
+
 Every public proposal also has a permanent `/lab?proposal=<id>` page backed by the single-record API. The public response contains only the proposal ID, title, description, status, and creation time.
 
 See [README-backend.md](README-backend.md) for request shapes, state transitions, worker policy, and configuration details.
