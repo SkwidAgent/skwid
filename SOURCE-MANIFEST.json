@@ -111,7 +111,7 @@
     },
     {
       "path": "public/app.js",
-      "sha256": "158cd516222eff314a3d3a4b0a50771a3be3c8319c1ee9e6e360ca82a72c7a6a"
+      "sha256": "a60cc49580058f6743645d76b5751b21b4a2d2bb9248e325ae8e25286addb7a7"
     },
     {
       "path": "public/assets/banner.png",
@@ -127,7 +127,7 @@
     },
     {
       "path": "public/index.html",
-      "sha256": "61512e8396038b4827726e51c06daf305d1646188ed9c23949da199dfc21c48b"
+      "sha256": "4ea806c15ee973458fd62b98312eb941d53138622ee6dcbcd9b6e224cc90bc57"
     },
     {
       "path": "public/journal-evidence.mjs",
