@@ -15,11 +15,11 @@
     },
     {
       "path": "README-backend.md",
-      "sha256": "fcbc57f6ff9065e8bd97cae5c665fad9cc7398a2755a0b38f0cb41f753897ab8"
+      "sha256": "903f7ebabf8f2e1d32ae3ccaaf1685c3b236298bc5fe9c107b7b9b73f01520e3"
     },
     {
       "path": "README.md",
-      "sha256": "91ccaf5c7ef1cdda32e5cc87b680c4a0fd5ca4bbfb11fea9cceee90903c856a2"
+      "sha256": "355d7b65b4ae29ea1010f8e5a0dfdf9418cf5be34f8b67cf69e97bda5c5a8c7a"
     },
     {
       "path": "contracts/.env.example",
@@ -111,7 +111,7 @@
     },
     {
       "path": "public/app.js",
-      "sha256": "8482dbd1fbe7e4e9ac2f0332a12a3d40562794cf748274c0fe5788fef717ae63"
+      "sha256": "76898cae20754c311e5e5a743fb27b66232fee6641518da1c7d2dd47a26f500e"
     },
     {
       "path": "public/assets/banner.png",
@@ -127,11 +127,11 @@
     },
     {
       "path": "public/index.html",
-      "sha256": "e5be84c56d99e2cb13aedb14386cfc8f2b1393761871ec23ce6a87b598257018"
+      "sha256": "c7fd21d0c63011c53162412f7457ffd8c38ab06e2e789885b5b6a8c25b6e3a49"
     },
     {
       "path": "public/style.css",
-      "sha256": "d9a76deb41a2a6b3acc42c0be004db0c410bc51c92f77d613c5e377316c04fe5"
+      "sha256": "970cd2bf2e04734fab7bc76fb3048ae156e03d821b25c01c44dad6f42aa940ed"
     },
     {
       "path": "scripts/runner.mjs",
@@ -166,6 +166,10 @@
       "sha256": "2addbf236d5c2f3356bb918926cc27bce2befa9840364a47d982fa7743dd435c"
     },
     {
+      "path": "server/journal-feed.mjs",
+      "sha256": "fd2d1d7b21c48748ca8a37b24e4dbbe6c49f32ed076e00d570d12f602fef181d"
+    },
+    {
       "path": "server/migrate.mjs",
       "sha256": "afb2b1b41d2e728986f86fa1327984d52696c4ddfc635dafdf23cb61de905e06"
     },
@@ -183,7 +187,7 @@
     },
     {
       "path": "server/routes.mjs",
-      "sha256": "f8511732ba56bcdb5156d5ba6c04ec0ede84a98cef963de6d98991f2e20d7666"
+      "sha256": "4bdfdbebe1ac569aa7348d21fa5e40f79c17a77fc381f3179c2b4097d7da5a3e"
     },
     {
       "path": "server/runner.mjs",
@@ -200,6 +204,10 @@
     {
       "path": "tests/backend-db.test.mjs",
       "sha256": "dd2f0de407cdc606de265bcd6f02ae0afdf04000c6ab88c3fa65bcf2d87b74b5"
+    },
+    {
+      "path": "tests/backend-feed.test.mjs",
+      "sha256": "26a9463dcafe9ee013bd7dcc8927a7c658b999aa2fd5ace33250e30b81de2e08"
     },
     {
       "path": "tests/backend-lease.test.mjs",

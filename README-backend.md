@@ -32,6 +32,7 @@ Public endpoints:
 - `GET /api/status` returns brand, chain, configured token or `null`, latest observed treasury balance or `null`, owner-operated agent state, links, and database-derived counts.
 - `GET /api/proposals` and `POST /api/proposals` list and submit ideas. Titles are limited to 100 characters; descriptions to 3,000. Requests have a 128 KiB body limit, and public intake adds a per-process IP rate limit plus a `website` honeypot field.
 - `GET /api/journal`, `GET /api/journal/:id`, and `GET /api/treasury` expose only persisted records.
+- `GET /api/journal/feed.xml` renders those same journal rows as RSS 2.0 with canonical item links in the form `https://skwid.fun/journal?entry=<id>`. An empty journal produces an empty channel rather than sample entries.
 - `GET /api/fees` performs block-tagged Pons configuration reads only when a real token is configured.
 - `GET /api/registry` performs block-tagged reads from the deployed `SkwidReleaseRegistry` configured by `SKWID_RELEASE_REGISTRY_ADDRESS`, or returns `registry: null` before deployment.
 
