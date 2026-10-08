@@ -15,11 +15,11 @@
     },
     {
       "path": "README-backend.md",
-      "sha256": "a9020cde858fdb0433248c887e104e634b6ad11c54afc9bf72d2b7a1286e16b0"
+      "sha256": "ab6bd0668f7c491272ef88de6011f40f1dc055683a1c1f5b1dbfce5f900f7e9a"
     },
     {
       "path": "README.md",
-      "sha256": "eeab87e165111ac0f6c82d8374361d18483313bbbc60e0631d42f87ba6c7f037"
+      "sha256": "4257d74dc65bb477504f3318f2949bec03a1e3bde1ca2ed13ee1e565011dd39a"
     },
     {
       "path": "contracts/.env.example",
@@ -111,7 +111,7 @@
     },
     {
       "path": "public/app.js",
-      "sha256": "a06ea03c2885090a9b24f504e633f505518092a89b50eaa4fd8b475444d82711"
+      "sha256": "cff3b58c70520c2664ddd46b31097440ee9438be4920e4f179621749c6ecc526"
     },
     {
       "path": "public/assets/banner.png",
@@ -127,11 +127,15 @@
     },
     {
       "path": "public/index.html",
-      "sha256": "6ebd0fff8d8fad426a8ef3411fc184a7ab9e5c812c754eac82ecdeb892e8b2e7"
+      "sha256": "e606b817b48bd1e2baf6be5bdbb0230ad6191359aa3a45e245135283e43513dd"
     },
     {
       "path": "public/journal-evidence.mjs",
       "sha256": "6e5f03ce3cfc2cf7009261ac4d4a35d704d91c5847569c4a81674fbe4a935412"
+    },
+    {
+      "path": "public/journal-neighbors.mjs",
+      "sha256": "60b4b2f3618b5f5969c21e597dd110d9ab0c43be6aa8d9ab257628ac47f2b2f3"
     },
     {
       "path": "public/journal-search.mjs",
@@ -143,7 +147,7 @@
     },
     {
       "path": "public/style.css",
-      "sha256": "7aab86f45ae164b3e94f0ccc5d16a03a8befb9710cd8d0fd031dc2c399be1a83"
+      "sha256": "5c2cf9efeadfdfce5ef0994d5454135f3c091ada8ff8476f4f1c6399918c48e1"
     },
     {
       "path": "public/treasury-observation.mjs",
@@ -199,11 +203,11 @@
     },
     {
       "path": "server/repository.mjs",
-      "sha256": "7b316e24d39343d1c6802e2fe765034b83d662dad3996d71dd8bd7d3b8b0bd5e"
+      "sha256": "355368800000576894f9dc52ededa0752172bc74d5017077d87208af1699323e"
     },
     {
       "path": "server/routes.mjs",
-      "sha256": "3ff2f984c8c7c658aeb157dd3cc41953b8266f9aea0c1b54a7e81fa267e846f2"
+      "sha256": "06e9dc2e3cb32d086c87025427adcd3aa9eb53135fbc8726eaa8f82132eb7173"
     },
     {
       "path": "server/runner.mjs",
@@ -240,6 +244,10 @@
     {
       "path": "tests/journal-evidence.test.mjs",
       "sha256": "881870fc79b5c24e0c217823f8be0a0836caca918cd63ea502e5875e4d694642"
+    },
+    {
+      "path": "tests/journal-neighbors.test.mjs",
+      "sha256": "e6713e8f40d033d9efbdb48117e53bc4e943a6469561079a0f8eef1c2b76ccae"
     },
     {
       "path": "tests/journal-search.test.mjs",
