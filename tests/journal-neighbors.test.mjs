@@ -45,6 +45,14 @@ test('neighbor renderer uses ordinary safe permalinks and escapes untrusted titl
   assert.doesNotMatch(renderJournalNeighbors({ newer: { id: '../private', title: 'Unsafe' } }), /Unsafe/);
 });
 
+test('neighbor and All entries links retain normalized search context', () => {
+  const html = renderJournalNeighbors({ newer: { id: newerId, title: 'Newer' }, older: { id: olderId, title: 'Older' } }, '  release & memory/?  ');
+  assert.match(html, new RegExp(`/journal\\?entry=${newerId}&q=release%20%26%20memory%2F%3F`));
+  assert.match(html, new RegExp(`/journal\\?entry=${olderId}&q=release%20%26%20memory%2F%3F`));
+  assert.match(html, /href="\/journal\?q=release%20%26%20memory%2F%3F">All entries/);
+  assert.doesNotMatch(renderJournalNeighbors({ newer: { id: newerId, title: 'Newer' } }, ''), /&q=/);
+});
+
 test('journal detail route rejects invalid IDs before repository access', async () => {
   let called = false;
   const repository = { getJournal: async () => { called = true; } };
