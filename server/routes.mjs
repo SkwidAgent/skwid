@@ -46,7 +46,7 @@ export function createApiRouter({ config, repository, pool }) {
       ticker: '$Swkid',
       chain: { id: config.chain.id, name: config.chain.name },
       token,
-      treasury: latest ? { address: latest.address, balanceWei: latest.balanceWei, observedAt: latest.observedAt } : null,
+      treasury: latest ? { address: latest.address, balanceWei: latest.balanceWei, observedAt: latest.observedAt, blockNumber: latest.blockNumber } : null,
       agent: { status: state.active ? 'running' : 'owner-operated', lastRunAt: state.last_run_at },
       links: config.links,
       counts: { proposals: state.proposals, runs: state.runs, releases: state.releases },
