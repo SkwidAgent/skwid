@@ -1,5 +1,6 @@
 import {filterJournalEntries,journalSearchPath,normalizeJournalQuery} from '/journal-search.mjs?v=c3a6b999535d';
 import {normalizeProposalId,proposalPath,renderProposal} from '/proposal-view.mjs?v=e9a619beffbd';
+import {renderJournalEvidence} from '/journal-evidence.mjs?v=6e5f03ce3cfc';
 const main = document.querySelector('#main');
 const path = location.pathname.replace(/\/$/, '') || '/';
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -31,18 +32,13 @@ async function openEntry(id) {
     const data = await api(`/api/journal/${encodeURIComponent(id)}`);
     const entry = data.item || data;
     const permalink = new URL(`/journal?entry=${encodeURIComponent(entry.id)}`, location.origin).href;
-    const checks = Array.isArray(entry.checks) ? entry.checks : [];
-    const patch = typeof entry.details?.patchSha256 === 'string' ? entry.details.patchSha256 : null;
     document.title = `${entry.title} | Skwid Journal`;
     content.innerHTML = `<p class="small">${date(entry.createdAt)}</p><h2>${escapeHtml(entry.title)}</h2>
       <div class="entry-prose">${String(entry.summary || '').split(/\n\s*\n/).map(p=>`<p>${escapeHtml(p)}</p>`).join('')}</div>
       <div class="entry-actions"><button class="text-link" id="copy-entry-link">Copy entry link</button><a class="text-link" href="/api/journal/feed.xml">Subscribe via RSS</a></div>
       <p id="entry-share-status" class="small" role="status"></p>
       <details class="entry-evidence"><summary>Release record</summary>
-      ${entry.commit ? `<p class="small">SOURCE REVISION</p><code>${escapeHtml(entry.commit)}</code>` : ''}
-      ${patch ? `<p class="small">PATCH DIGEST · SHA-256</p><code>${escapeHtml(patch)}</code>` : ''}
-      ${checks.length ? `<ul>${checks.map(c=>`<li>${escapeHtml(c.name)}: ${c.ok === true ? 'passed' : 'not passed'}${c.scope ? ` (${escapeHtml(c.scope)})` : ''}</li>`).join('')}</ul>` : ''}
-      <a class="text-link" href="/api/journal/${encodeURIComponent(entry.id)}">Read entry as JSON</a></details>`;
+      ${renderJournalEvidence(entry)}</details>`;
     document.querySelector('#copy-entry-link').addEventListener('click', async () => {
       const status = document.querySelector('#entry-share-status');
       try { await navigator.clipboard.writeText(permalink); status.textContent = 'Entry link copied.'; }
