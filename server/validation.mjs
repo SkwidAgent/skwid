@@ -17,6 +17,13 @@ export function validateProposal(body = {}) {
   return { title: cleanText(body.title, 'title', 100), description: cleanText(body.description, 'description', 3000) };
 }
 
+export function validateUuid(value, field = 'id') {
+  if (typeof value !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(value)) {
+    throw new HttpError(400, 'invalid_input', `${field} must be a UUID.`);
+  }
+  return value.toLowerCase();
+}
+
 export function safeRelativePath(input, allowedRoots) {
   if (typeof input !== 'string' || !input || input.includes('\\') || input.includes('\0')) {
     throw new HttpError(400, 'invalid_change', 'A change path is invalid.');

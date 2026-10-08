@@ -33,6 +33,16 @@ export class Repository {
     return result.rows.map(proposalView);
   }
 
+  async getProposal(id) {
+    const result = await this.pool.query(
+      `SELECT id, title, description, status, created_at
+       FROM skwid.proposals WHERE id = $1`,
+      [id],
+    );
+    if (!result.rowCount) throw new HttpError(404, 'not_found', 'Proposal not found.');
+    return proposalView(result.rows[0]);
+  }
+
   async approveProposal(id) {
     const result = await this.pool.query(
       `UPDATE skwid.proposals SET status = 'approved', approved_at = now(), updated_at = now()

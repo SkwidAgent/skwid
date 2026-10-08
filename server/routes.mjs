@@ -4,7 +4,7 @@ import { observeTreasury, preparePonsCollection, readPonsFeeConfiguration } from
 import { HttpError } from './errors.mjs';
 import { JOURNAL_FEED_CONTENT_TYPE, renderJournalFeed } from './journal-feed.mjs';
 import { prepareReleaseRecord, readReleaseRegistry } from './registry.mjs';
-import { validateProposal, validateRunRequest } from './validation.mjs';
+import { validateProposal, validateRunRequest, validateUuid } from './validation.mjs';
 
 const asyncRoute = (fn) => (req, res, next) => Promise.resolve(fn(req, res, next)).catch(next);
 
@@ -59,6 +59,7 @@ export function createApiRouter({ config, repository, pool }) {
     const created = await repository.createProposal({ ...input, ipHash: hashRemoteAddress(req.ip) });
     res.status(201).json(created);
   }));
+  router.get('/proposals/:id', asyncRoute(async (req, res) => res.json(await repository.getProposal(validateUuid(req.params.id, 'Proposal ID')))));
 
   router.get('/journal', asyncRoute(async (_req, res) => res.json({ items: await repository.listJournal() })));
   router.get('/journal/feed.xml', asyncRoute(async (_req, res) => {
