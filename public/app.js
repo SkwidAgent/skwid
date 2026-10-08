@@ -2,6 +2,7 @@ import {filterJournalEntries,journalSearchPath,normalizeJournalQuery} from '/jou
 import {normalizeProposalId,proposalPath,renderProposal} from '/proposal-view.mjs?v=e9a619beffbd';
 import {renderJournalEvidence} from '/journal-evidence.mjs?v=6e5f03ce3cfc';
 import {renderTreasuryObservation} from '/treasury-observation.mjs?v=57d908b98d5c';
+import {renderJournalNeighbors} from '/journal-neighbors.mjs?v=60b4b2f3618b';
 const main = document.querySelector('#main');
 const path = location.pathname.replace(/\/$/, '') || '/';
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -38,6 +39,7 @@ async function openEntry(id) {
       <div class="entry-prose">${String(entry.summary || '').split(/\n\s*\n/).map(p=>`<p>${escapeHtml(p)}</p>`).join('')}</div>
       <div class="entry-actions"><button class="text-link" id="copy-entry-link">Copy entry link</button><a class="text-link" href="/api/journal/feed.xml">Subscribe via RSS</a></div>
       <p id="entry-share-status" class="small" role="status"></p>
+      ${renderJournalNeighbors(entry.neighbors)}
       <details class="entry-evidence"><summary>Release record</summary>
       ${renderJournalEvidence(entry)}</details>`;
     document.querySelector('#copy-entry-link').addEventListener('click', async () => {

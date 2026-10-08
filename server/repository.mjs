@@ -5,7 +5,13 @@ import { HttpError } from './errors.mjs';
 const proposalView = (row) => ({ id: row.id, title: row.title, description: row.description, status: row.status, createdAt: row.created_at });
 const journalView = (row, detailed = false) => {
   const item = { id: row.id, title: row.title, summary: row.summary, createdAt: row.created_at, commit: row.commit_sha, checks: row.checks };
-  if (detailed) item.details = row.details;
+  if (detailed) {
+    item.details = row.details;
+    item.neighbors = {
+      newer: row.newer_id ? { id: row.newer_id, title: row.newer_title } : null,
+      older: row.older_id ? { id: row.older_id, title: row.older_title } : null,
+    };
+  }
   return item;
 };
 
@@ -103,15 +109,31 @@ export class Repository {
   async listJournal() {
     const result = await this.pool.query(
       `SELECT id, title, summary, created_at, commit_sha, checks
-       FROM skwid.journal ORDER BY created_at DESC LIMIT 100`,
+       FROM skwid.journal ORDER BY created_at DESC, id DESC LIMIT 100`,
     );
     return result.rows.map((row) => journalView(row));
   }
 
   async getJournal(id) {
     const result = await this.pool.query(
-      `SELECT id, title, summary, created_at, commit_sha, checks, details
-       FROM skwid.journal WHERE id = $1`,
+      `WITH current AS (
+         SELECT id, title, summary, created_at, commit_sha, checks, details
+         FROM skwid.journal WHERE id = $1
+       )
+       SELECT current.*,
+         newer.id AS newer_id, newer.title AS newer_title,
+         older.id AS older_id, older.title AS older_title
+       FROM current
+       LEFT JOIN LATERAL (
+         SELECT id, title FROM skwid.journal
+         WHERE (created_at, id) > (current.created_at, current.id)
+         ORDER BY created_at ASC, id ASC LIMIT 1
+       ) newer ON true
+       LEFT JOIN LATERAL (
+         SELECT id, title FROM skwid.journal
+         WHERE (created_at, id) < (current.created_at, current.id)
+         ORDER BY created_at DESC, id DESC LIMIT 1
+       ) older ON true`,
       [id],
     );
     if (!result.rowCount) throw new HttpError(404, 'not_found', 'Journal entry not found.');

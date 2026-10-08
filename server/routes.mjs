@@ -69,7 +69,7 @@ export function createApiRouter({ config, repository, pool }) {
       'Cache-Control': 'public, max-age=60',
     }).send(xml);
   }));
-  router.get('/journal/:id', asyncRoute(async (req, res) => res.json(await repository.getJournal(req.params.id))));
+  router.get('/journal/:id', asyncRoute(async (req, res) => res.json(await repository.getJournal(validateUuid(req.params.id, 'Journal ID')))));
   router.get('/treasury', asyncRoute(async (_req, res) => res.json({ items: await repository.treasury() })));
   router.get('/fees', asyncRoute(async (_req, res) => {
     if (!config.token.address) return res.json({ configuration: null });
