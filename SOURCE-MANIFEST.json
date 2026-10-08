@@ -15,11 +15,11 @@
     },
     {
       "path": "README-backend.md",
-      "sha256": "985b0c0edc7f2ed65fac9da12336c3c94c3537d7b3641c9e0e1cd6151fc86339"
+      "sha256": "a9020cde858fdb0433248c887e104e634b6ad11c54afc9bf72d2b7a1286e16b0"
     },
     {
       "path": "README.md",
-      "sha256": "e4edbc0a6704580bb26c2fdbf82b110939585d7f49209731296f9a11b4255d84"
+      "sha256": "eeab87e165111ac0f6c82d8374361d18483313bbbc60e0631d42f87ba6c7f037"
     },
     {
       "path": "contracts/.env.example",
@@ -111,7 +111,7 @@
     },
     {
       "path": "public/app.js",
-      "sha256": "4136c987eb5ae072d8c7037295f43d6e131dc2fe9bde288a29d7dbf709735a15"
+      "sha256": "a06ea03c2885090a9b24f504e633f505518092a89b50eaa4fd8b475444d82711"
     },
     {
       "path": "public/assets/banner.png",
@@ -127,7 +127,7 @@
     },
     {
       "path": "public/index.html",
-      "sha256": "9c0434c2f7c388c13b569577836a9dd4d6c60e1d56a6d125c8fde815e1a21809"
+      "sha256": "6ebd0fff8d8fad426a8ef3411fc184a7ab9e5c812c754eac82ecdeb892e8b2e7"
     },
     {
       "path": "public/journal-evidence.mjs",
@@ -143,7 +143,11 @@
     },
     {
       "path": "public/style.css",
-      "sha256": "9c875526472fe95569d437d50e631ae18910bc7ef8e4448c1e257609360ad573"
+      "sha256": "7aab86f45ae164b3e94f0ccc5d16a03a8befb9710cd8d0fd031dc2c399be1a83"
+    },
+    {
+      "path": "public/treasury-observation.mjs",
+      "sha256": "57d908b98d5cea704211aa55292f7ef8b33fa330176c484592089bf0b672eaf3"
     },
     {
       "path": "scripts/runner.mjs",
@@ -199,7 +203,7 @@
     },
     {
       "path": "server/routes.mjs",
-      "sha256": "96d64c654a9b9a745dd4de03d34c273ff8d8b734ee9a1559706547721e1108c8"
+      "sha256": "3ff2f984c8c7c658aeb157dd3cc41953b8266f9aea0c1b54a7e81fa267e846f2"
     },
     {
       "path": "server/runner.mjs",
@@ -244,6 +248,10 @@
     {
       "path": "tests/proposal-detail.test.mjs",
       "sha256": "b7ee9625ecf6a40105ce03c724b8aee6f9d0fb7b49534ca9749d69b2c4b20b2b"
+    },
+    {
+      "path": "tests/treasury-observation.test.mjs",
+      "sha256": "d2bc091525291adb81932f1591c31b5111a954d03408601c668fd17e7e2db65e"
     }
   ]
 }
