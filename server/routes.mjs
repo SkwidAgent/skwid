@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { hashRemoteAddress, requireAdmin } from './auth.mjs';
 import { observeTreasury, preparePonsCollection, readPonsFeeConfiguration } from './chain.mjs';
 import { HttpError } from './errors.mjs';
+import { JOURNAL_FEED_CONTENT_TYPE, renderJournalFeed } from './journal-feed.mjs';
 import { prepareReleaseRecord, readReleaseRegistry } from './registry.mjs';
 import { validateProposal, validateRunRequest } from './validation.mjs';
 
@@ -60,6 +61,13 @@ export function createApiRouter({ config, repository, pool }) {
   }));
 
   router.get('/journal', asyncRoute(async (_req, res) => res.json({ items: await repository.listJournal() })));
+  router.get('/journal/feed.xml', asyncRoute(async (_req, res) => {
+    const xml = renderJournalFeed(await repository.listJournal());
+    res.set({
+      'Content-Type': JOURNAL_FEED_CONTENT_TYPE,
+      'Cache-Control': 'public, max-age=60',
+    }).send(xml);
+  }));
   router.get('/journal/:id', asyncRoute(async (req, res) => res.json(await repository.getJournal(req.params.id))));
   router.get('/treasury', asyncRoute(async (_req, res) => res.json({ items: await repository.treasury() })));
   router.get('/fees', asyncRoute(async (_req, res) => {
