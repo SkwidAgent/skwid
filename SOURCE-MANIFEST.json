@@ -111,7 +111,7 @@
     },
     {
       "path": "public/app.js",
-      "sha256": "a60cc49580058f6743645d76b5751b21b4a2d2bb9248e325ae8e25286addb7a7"
+      "sha256": "2cda9896d3255399187d7d2d71a8dacccd29fdf480551d9abad13382856fdbf2"
     },
     {
       "path": "public/assets/banner.png",
@@ -127,7 +127,7 @@
     },
     {
       "path": "public/index.html",
-      "sha256": "4ea806c15ee973458fd62b98312eb941d53138622ee6dcbcd9b6e224cc90bc57"
+      "sha256": "8cbae222206837c52fc1e0205b68e0263f3bc34027342c5ff0da8b15143f31b3"
     },
     {
       "path": "public/journal-evidence.mjs",
@@ -147,7 +147,7 @@
     },
     {
       "path": "public/style.css",
-      "sha256": "ffab9de99bbef9b0539d8ec5198266da8f14dfa70faa42e72f05f3a84d8d3e55"
+      "sha256": "5aee02299e501c339b30f027b0a61d002bbcfac76dcaf5817863e29d6b614fed"
     },
     {
       "path": "public/treasury-observation.mjs",
