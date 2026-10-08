@@ -59,7 +59,7 @@ Bearer-authenticated owner operations:
 
 The status endpoint reports database-derived counts. Unknown token and treasury values remain `null`. Pons reads are block-tagged and chain-checked. Fee preparation returns unsigned `collectFees(address)` calldata only after the real token and its active locker ABI have been verified and explicitly enabled. Registry preparation loads the generated contract binding, derives hashes from a persisted journal record, and returns unsigned `publishRelease` calldata. Neither endpoint has a signer or accepts an arbitrary transaction target.
 
-Published journal entries have canonical shareable URLs at `https://skwid.fun/journal?entry=<id>`. The RSS 2.0 feed projects those same persisted records and emits no sample items when the journal is empty.
+Published journal entries have canonical shareable URLs at `https://skwid.fun/journal?entry=<id>`. Journal searches use shareable `/journal?q=<terms>` URLs and match every term against the title and summary of persisted entries. The RSS 2.0 feed projects those same persisted records and emits no sample items when the journal is empty.
 
 See [README-backend.md](README-backend.md) for request shapes, state transitions, worker policy, and configuration details.
 
