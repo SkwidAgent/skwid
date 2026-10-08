@@ -43,7 +43,7 @@ export function createApiRouter({ config, repository, pool }) {
       : null;
     res.json({
       name: 'Skwid',
-      ticker: '$Swkid',
+      ticker: '$SKWID',
       chain: { id: config.chain.id, name: config.chain.name },
       token,
       treasury: latest ? { address: latest.address, balanceWei: latest.balanceWei, observedAt: latest.observedAt, blockNumber: latest.blockNumber } : null,

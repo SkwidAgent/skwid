@@ -2,7 +2,7 @@
 
 Skwid is an owner-governed software evolution service for Robinhood Chain. Visitors submit ideas, the owner approves a bounded change against an exact Git commit, an isolated worker produces check evidence, and the owner decides whether the result belongs in the public journal. The service never merges, deploys, signs a transaction, or publishes a journal record on its own.
 
-The public site uses the exact display ticker `$Swkid`. A token, treasury observation, release registry, and Pons collection path remain absent until their real addresses and activation evidence are configured.
+The public site uses the exact display ticker `$SKWID`. A token, treasury observation, release registry, and Pons collection path remain absent until their real addresses and activation evidence are configured.
 
 ## How the loop works
 
